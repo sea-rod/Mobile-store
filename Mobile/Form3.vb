@@ -49,13 +49,21 @@ Public Class Form3
             End Try
         End If
 
+        Try
 
-        If e.ColumnIndex = 4 And e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-            If row.Cells("price").Value Then
-                row.Cells("amt").Value = row.Cells("price").Value * row.Cells("quantity").Value
+            If e.ColumnIndex = 4 And e.RowIndex >= 0 Then
+                Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+                If row.Cells("price").Value Then
+                    row.Cells("amt").Value = row.Cells("price").Value * row.Cells("quantity").Value
+                End If
             End If
-        End If
+        Catch ex As InvalidCastException
+
+            MsgBox("The quantity value should be a integer", MsgBoxStyle.Critical, "Error")
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+
+        End Try
 
 
     End Sub

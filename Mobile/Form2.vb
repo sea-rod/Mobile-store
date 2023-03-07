@@ -11,17 +11,9 @@ Public Class Form2
 
     Private Sub load_data()
         Dim cmd As New MySqlCommand("SELECT * FROM mobile", conn)
-
-        ' Create a DataTable to hold the data
         Dim dt As New DataTable()
-
-        ' Create a MySqlDataAdapter to fill the DataTable with data
         Dim da As New MySqlDataAdapter(cmd)
-
-        ' Fill the DataTable with data from the database
         da.Fill(dt)
-
-        ' Set the DataGridView control's DataSource property to the DataTable
         DataGridView1.DataSource = dt
     End Sub
 

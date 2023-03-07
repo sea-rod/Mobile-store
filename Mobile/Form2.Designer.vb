@@ -238,44 +238,44 @@ Partial Class Form2
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(48, 126)
+        Me.Label8.Location = New System.Drawing.Point(21, 133)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(53, 19)
+        Me.Label8.Size = New System.Drawing.Size(72, 19)
         Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Label8"
+        Me.Label8.Text = "Company"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(51, 96)
+        Me.Label7.Location = New System.Drawing.Point(21, 96)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(53, 19)
+        Me.Label7.Size = New System.Drawing.Size(41, 19)
         Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Label7"
+        Me.Label7.Text = "Price"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(48, 76)
+        Me.Label6.Location = New System.Drawing.Point(21, 60)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(53, 19)
+        Me.Label6.Size = New System.Drawing.Size(52, 19)
         Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Label6"
+        Me.Label6.Text = "Model"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(45, 28)
+        Me.Label5.Location = New System.Drawing.Point(21, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 19)
+        Me.Label5.Size = New System.Drawing.Size(64, 19)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Label5"
+        Me.Label5.Text = "Barcode"
         '
         'TextBox4
         '
@@ -288,7 +288,7 @@ Partial Class Form2
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(100, 120)
+        Me.TextBox3.Location = New System.Drawing.Point(100, 130)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 27)
         Me.TextBox3.TabIndex = 2
@@ -296,7 +296,7 @@ Partial Class Form2
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(100, 70)
+        Me.TextBox2.Location = New System.Drawing.Point(100, 61)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 27)
         Me.TextBox2.TabIndex = 1
@@ -304,7 +304,7 @@ Partial Class Form2
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(100, 22)
+        Me.TextBox1.Location = New System.Drawing.Point(100, 25)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 27)
         Me.TextBox1.TabIndex = 0
