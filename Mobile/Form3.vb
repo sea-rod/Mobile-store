@@ -1,6 +1,8 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Diagnostics.Eventing
+Imports MySql.Data.MySqlClient
 
 Public Class Form3
+    Dim flag As Boolean = True
     Dim connString As String = "server=localhost;user=root;password=$$$sea11$$$;database=mobile_store"
     Dim conn As New MySqlConnection(connString)
 
@@ -11,8 +13,8 @@ Public Class Form3
 
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         If e.ColumnIndex = 0 And e.RowIndex >= 0 Then
-            Label1.Text = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
-            Dim cmd As New MySqlCommand("SELECT * FROM mobile where barcode=" + Label1.Text, conn)
+            Dim brc As String = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
+            Dim cmd As New MySqlCommand("SELECT * FROM mobile where barcode=" + brc, conn)
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader
             Try
@@ -34,14 +36,13 @@ Public Class Form3
                     row.Cells("price").Value = price
                     row.Cells("company").Value = company
                 Else
-                    Label1.Text = "g"
+                    MsgBox("Barcode does not exist", MsgBoxStyle.Critical, "Error")
                     reader.Close()
 
                 End If
 
 
             Catch ex As Exception
-                Label1.Text = "ffff"
                 conn.Close()
                 reader.Close()
 
@@ -65,19 +66,30 @@ Public Class Form3
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sum As Integer
-        For Each row As DataGridViewRow In DataGridView1.Rows
-            sum += row.Cells("amt").Value
-        Next
-        Dim i As Integer = DataGridView1.Rows.Add()
+        If flag And DataGridView1.Rows.Count() > 1 Then
+            Dim sum As Integer = 0
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                sum += row.Cells("amt").Value
+            Next
+            Dim i As Integer = DataGridView1.Rows.Add()
 
-        DataGridView1.Rows(i).Cells("quantity").Value = "total"
-        DataGridView1.Rows(i).Cells("amt").Value = sum
+            DataGridView1.Rows(i).Cells("quantity").Value = "total"
+            DataGridView1.Rows(i).Cells("amt").Value = sum
+
+            flag = False
+        Else
+            MsgBox("Clear the table or enter some value in the table", MsgBoxStyle.Critical, "Error")
+        End If
     End Sub
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
         Form2.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        DataGridView1.Rows.Clear()
+        flag = True
     End Sub
 End Class

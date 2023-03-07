@@ -44,7 +44,7 @@ Public Class Form2
                 status.Text = "Added successfully"
                 status.BackColor = Color.Green
             Else
-                status.Text = "Error"
+                status.Text = "Error Ocurred"
                 status.BackColor = Color.DarkRed
             End If
             load_data()
@@ -53,7 +53,8 @@ Public Class Form2
             price.Clear()
             company.Clear()
         Catch ex As Exception
-
+            status.Text = ex.Message
+            status.BackColor = Color.DarkRed
         End Try
 
 
@@ -70,7 +71,7 @@ Public Class Form2
                 status.Text = "Deleted successfully"
                 status.BackColor = Color.Green
             Else
-                status.Text = "Error"
+                status.Text = "Error Ocurred"
                 status.BackColor = Color.DarkRed
             End If
 
@@ -79,8 +80,8 @@ Public Class Form2
             bcd.Clear()
 
         Catch ex As Exception
-            status.BackColor = Color.Red
-            status.Text = "Error"
+            status.BackColor = Color.DarkRed
+            status.Text = ex.Message
 
         End Try
 
