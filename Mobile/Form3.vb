@@ -14,7 +14,9 @@ Public Class Form3
     Private Sub DataGridView1_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellValueChanged
         If e.ColumnIndex = 0 And e.RowIndex >= 0 Then
             Dim brc As String = DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
-            Dim cmd As New MySqlCommand("SELECT * FROM mobile where barcode=" + brc, conn)
+            Dim cmd As New MySqlCommand("SELECT * FROM mobile where barcode=@brc", conn)
+            cmd.Parameters.AddWithValue("@brc", brc)
+
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader
             Try
@@ -85,6 +87,7 @@ Public Class Form3
             DataGridView1.Rows(i).Cells("amt").Value = sum
 
             flag = False
+            DataGridView1.ReadOnly = True
         Else
             MsgBox("Clear the table or enter some value in the table", MsgBoxStyle.Critical, "Error")
         End If
@@ -99,5 +102,6 @@ Public Class Form3
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         DataGridView1.Rows.Clear()
         flag = True
+        DataGridView1.ReadOnly = False
     End Sub
 End Class

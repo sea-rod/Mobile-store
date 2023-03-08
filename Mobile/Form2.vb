@@ -27,9 +27,13 @@ Public Class Form2
 
         Try
 
-            q = "insert into mobile(model,price,company) values ('" + model.Text + "'," + price.Text + ",'" + company.Text + "');"
+            q = "insert into mobile (model, price, company) VALUES (@model, @price, @company)"
 
             Dim cmd As New MySqlCommand(q, conn)
+            cmd.Parameters.AddWithValue("@model", model.Text)
+            cmd.Parameters.AddWithValue("@company", company.Text)
+            cmd.Parameters.AddWithValue("@price", Int(price.Text))
+
             Dim i As Integer = cmd.ExecuteNonQuery()
 
             If i <> 0 Then
@@ -83,5 +87,46 @@ Public Class Form2
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
         Form3.Show()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        Dim q As String
+        Try
+            q = "update mobile set model=@model,price=@price,company=@company where barcode=@barcode"
+            Dim cmd As New MySqlCommand(q, conn)
+            cmd.Parameters.AddWithValue("@model", mdl.Text)
+            cmd.Parameters.AddWithValue("@price", Int(prc.Text))
+            cmd.Parameters.AddWithValue("@company", cmp.Text)
+            cmd.Parameters.AddWithValue("@barcode", brc.Text)
+
+
+            Dim i As Integer = cmd.ExecuteNonQuery()
+
+            mdl.Clear()
+            prc.Clear()
+            cmp.Clear()
+            brc.Clear()
+
+            If i <> 0 Then
+                status.Text = "Updated successfully"
+                status.BackColor = Color.Green
+            Else
+                status.Text = "Error Ocurred"
+                status.BackColor = Color.DarkRed
+            End If
+
+
+            load_data()
+
+
+        Catch ex As Exception
+            status.BackColor = Color.DarkRed
+            status.Text = ex.Message
+
+        End Try
+
+
+
     End Sub
 End Class

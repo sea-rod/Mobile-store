@@ -22,8 +22,8 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -43,11 +43,12 @@ Partial Class Form2
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.prc = New System.Windows.Forms.TextBox()
+        Me.cmp = New System.Windows.Forms.TextBox()
+        Me.mdl = New System.Windows.Forms.TextBox()
+        Me.brc = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -58,25 +59,26 @@ Partial Class Form2
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft New Tai Lue", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridView1.Location = New System.Drawing.Point(124, 59)
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft New Tai Lue", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.DataGridView1.Location = New System.Drawing.Point(163, 42)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(531, 150)
         Me.DataGridView1.TabIndex = 0
         '
@@ -142,7 +144,7 @@ Partial Class Form2
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(92, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(99, 129)
+        Me.Button1.Location = New System.Drawing.Point(99, 147)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 28)
         Me.Button1.TabIndex = 7
@@ -154,9 +156,9 @@ Partial Class Form2
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(48, 120)
+        Me.Button2.Location = New System.Drawing.Point(66, 129)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 25)
+        Me.Button2.Size = New System.Drawing.Size(75, 28)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = False
@@ -164,7 +166,7 @@ Partial Class Form2
         'bcd
         '
         Me.bcd.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bcd.Location = New System.Drawing.Point(90, 52)
+        Me.bcd.Location = New System.Drawing.Point(82, 52)
         Me.bcd.Name = "bcd"
         Me.bcd.Size = New System.Drawing.Size(123, 27)
         Me.bcd.TabIndex = 9
@@ -190,9 +192,9 @@ Partial Class Form2
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.model)
         Me.Panel1.Controls.Add(Me.company)
-        Me.Panel1.Location = New System.Drawing.Point(3, 250)
+        Me.Panel1.Location = New System.Drawing.Point(3, 231)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(343, 175)
+        Me.Panel1.Size = New System.Drawing.Size(343, 203)
         Me.Panel1.TabIndex = 11
         '
         'Panel2
@@ -201,9 +203,9 @@ Partial Class Form2
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.bcd)
-        Me.Panel2.Location = New System.Drawing.Point(652, 250)
+        Me.Panel2.Location = New System.Drawing.Point(364, 231)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(216, 175)
+        Me.Panel2.Size = New System.Drawing.Size(218, 203)
         Me.Panel2.TabIndex = 12
         '
         'Label4
@@ -211,7 +213,7 @@ Partial Class Form2
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(8, 55)
+        Me.Label4.Location = New System.Drawing.Point(12, 55)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 19)
         Me.Label4.TabIndex = 10
@@ -220,17 +222,18 @@ Partial Class Form2
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button4)
         Me.Panel3.Controls.Add(Me.Label8)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox3)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Controls.Add(Me.TextBox1)
-        Me.Panel3.Location = New System.Drawing.Point(376, 250)
+        Me.Panel3.Controls.Add(Me.prc)
+        Me.Panel3.Controls.Add(Me.cmp)
+        Me.Panel3.Controls.Add(Me.mdl)
+        Me.Panel3.Controls.Add(Me.brc)
+        Me.Panel3.Location = New System.Drawing.Point(598, 231)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(259, 166)
+        Me.Panel3.Size = New System.Drawing.Size(259, 203)
         Me.Panel3.TabIndex = 13
         '
         'Label8
@@ -238,7 +241,7 @@ Partial Class Form2
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(21, 133)
+        Me.Label8.Location = New System.Drawing.Point(34, 122)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(72, 19)
         Me.Label8.TabIndex = 7
@@ -249,7 +252,7 @@ Partial Class Form2
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(21, 96)
+        Me.Label7.Location = New System.Drawing.Point(34, 85)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(41, 19)
         Me.Label7.TabIndex = 6
@@ -260,7 +263,7 @@ Partial Class Form2
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(21, 60)
+        Me.Label6.Location = New System.Drawing.Point(34, 49)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 19)
         Me.Label6.TabIndex = 5
@@ -271,53 +274,68 @@ Partial Class Form2
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(21, 28)
+        Me.Label5.Location = New System.Drawing.Point(34, 17)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 19)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Barcode"
         '
-        'TextBox4
+        'prc
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(100, 96)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox4.TabIndex = 3
+        Me.prc.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prc.Location = New System.Drawing.Point(113, 85)
+        Me.prc.Name = "prc"
+        Me.prc.Size = New System.Drawing.Size(100, 27)
+        Me.prc.TabIndex = 3
         '
-        'TextBox3
+        'cmp
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(100, 130)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox3.TabIndex = 2
+        Me.cmp.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmp.Location = New System.Drawing.Point(113, 119)
+        Me.cmp.Name = "cmp"
+        Me.cmp.Size = New System.Drawing.Size(100, 27)
+        Me.cmp.TabIndex = 2
         '
-        'TextBox2
+        'mdl
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(100, 61)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox2.TabIndex = 1
+        Me.mdl.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mdl.Location = New System.Drawing.Point(113, 50)
+        Me.mdl.Name = "mdl"
+        Me.mdl.Size = New System.Drawing.Size(100, 27)
+        Me.mdl.TabIndex = 1
         '
-        'TextBox1
+        'brc
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(100, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox1.TabIndex = 0
+        Me.brc.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.brc.Location = New System.Drawing.Point(113, 14)
+        Me.brc.Name = "brc"
+        Me.brc.Size = New System.Drawing.Size(100, 27)
+        Me.brc.TabIndex = 0
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button3.Location = New System.Drawing.Point(3, 0)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(76, 26)
         Me.Button3.TabIndex = 14
         Me.Button3.Text = "Back"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(21, Byte), Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Tai Le", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(90, 164)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 25)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "Update"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Form2
         '
@@ -332,7 +350,7 @@ Partial Class Form2
         Me.Controls.Add(Me.status)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Text = "Database Operations"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -364,9 +382,10 @@ Partial Class Form2
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents prc As TextBox
+    Friend WithEvents cmp As TextBox
+    Friend WithEvents mdl As TextBox
+    Friend WithEvents brc As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class

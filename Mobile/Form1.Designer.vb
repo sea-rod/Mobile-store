@@ -117,7 +117,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(700, 430)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
