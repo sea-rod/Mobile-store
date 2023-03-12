@@ -1,5 +1,4 @@
-﻿Imports System.Diagnostics.Eventing
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Form3
     Dim flag As Boolean = True
